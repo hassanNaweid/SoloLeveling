@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Ostes.css">
+    <title>Anime OST Player</title>
+</head>
+<body>
+
+    <header class="header-section">
+        <div id="header-div" class="slider">
+            <h1 class="brand-title glow">Arise</h1>
+            <nav>
+                <a class="glow-button" href="index.html">Home</a>
+                <a class="glow-button" href="#">Game</a>
+                <a class="glow-button" href="#">Anime</a>
+                <a class="glow-button" href="gallary.html">Gallery</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="ost-container">
+        <h2 class="section-title">Anime OST Player</h2>
+
+        <div class="ost-wrapper">
+            <div class="ost-item">
+                <h3>The Main Theme</h3>
+                <img src="images/Main theme.jpg" alt="OST 1" class="ost-image">
+                <div class="custom-audio-player">
+                    <button class="play-button" aria-label="Play/Pause" id="playButton1">
+                        <span>&#9658;</span> <!-- Play Icon -->
+                    </button>
+                    <input type="range" class="volume-slider" id="volumeSlider1" min="0" max="1" step="0.01" value="0.5">
+                    <audio class="audio" id="audio1">
+                        <source src="ost/[Solo-Leveling] SymphonicSuite-Lv.2(MP3_128K).mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+            <div class="ost-item">
+                <h3>REVIVER</h3>
+                <img src="images/Revive.jpg" alt="OST 2" class="ost-image">
+                <div class="custom-audio-player">
+                    <button class="play-button" aria-label="Play/Pause" id="playButton2">
+                        <span>&#9658;</span> <!-- Play Icon -->
+                    </button>
+                    <input type="range" class="volume-slider" id="volumeSlider2" min="0" max="1" step="0.01" value="0.5">
+                    <audio class="audio" id="audio2">
+                        <source src="ost/REVIVER(MP3_160K).mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+            <div class="ost-item">
+                <h3>DARK ARIA</h3>
+                <img src="images/dark aria.jpeg" alt="OST 2" class="ost-image">
+                <div class="custom-audio-player">
+                    <button class="play-button" aria-label="Play/Pause" id="playButton2">
+                        <span>&#9658;</span> <!-- Play Icon -->
+                    </button>
+                    <input type="range" class="volume-slider" id="volumeSlider2" min="0" max="1" step="0.01" value="0.5">
+                    <audio class="audio" id="audio2">
+                        <source src="ost/The Real Hunt Begins _ DARK ARIA ＜LV2＞_ Solo Leveling EP 6 OST _ EPIC VERSION(MP3_128K).mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+            <div class="ost-item">
+                <h3>LEVEL</h3>
+                <img src="images/Op 1.jpg" alt="OST 2" class="ost-image">
+                <div class="custom-audio-player">
+                    <button class="play-button" aria-label="Play/Pause" id="playButton2">
+                        <span>&#9658;</span> <!-- Play Icon -->
+                    </button>
+                    <input type="range" class="volume-slider" id="volumeSlider2" min="0" max="1" step="0.01" value="0.5">
+                    <audio class="audio" id="audio2">
+                        <source src="ost/Solo Leveling Opening _ _LEveL_ by Hiroyuki Sawano [nZk] and TOMORROW X TOGETHER(MP3_128K).mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Audio Player Script
+        document.querySelectorAll('.custom-audio-player').forEach((player) => {
+            const audio = player.querySelector('.audio');
+            const playButton = player.querySelector('.play-button');
+            const volumeSlider = player.querySelector('.volume-slider');
+
+            playButton.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.innerHTML = '&#10074;&#10074;'; // Pause Icon
+                } else {
+                    audio.pause();
+                    playButton.innerHTML = '&#9658;'; // Play Icon
+                }
+            });
+
+            volumeSlider.addEventListener('input', () => {
+                audio.volume = volumeSlider.value;
+            });
+        });
+    </script>
+
+</body>
+</html>

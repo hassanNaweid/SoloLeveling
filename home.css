@@ -1,0 +1,329 @@
+/* General Body Styles */
+*{
+    width: 100%;
+}
+body {
+    background: url(images/COVER1.png) no-repeat center center fixed; 
+    background-size: cover; 
+    font-family: 'Arial', sans-serif; 
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+}
+
+/* Existing Header Styles */
+.header-section {
+   
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(9, 0, 173, 0.7)); 
+    padding: 15px 30px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+#header-div {
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+    
+}
+nav{
+    width: 800px;
+    padding: 10px;
+}
+span{
+    position: absolute;
+    bottom: 50px;
+}
+.brand-title {
+    font-size: 48px; 
+    color: black; 
+    margin-right: auto; 
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff, 0 0 30px #ff00ff; 
+    animation: glowing 1.5s infinite alternate; 
+    font-family: 'Valencia', sans-serif; 
+}
+a{
+    left: 500px;
+}
+nav a {
+ 
+    margin: 0 20px; 
+    color: #00ffcc; 
+    text-transform: uppercase; 
+    border: 2px solid transparent; 
+    padding: 10px; 
+    transition: color 0.3s, border-color 0.3s; 
+}
+
+nav a:hover {
+    color: #ff00ff; 
+    border-color: #00ffcc; 
+}
+
+.glow-button {
+    font-size: medium; 
+    background-color: #5b24de; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    color: #ffffff; 
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    text-shadow: 0 0 5px #f1f1f1; 
+}
+
+.glow-button:hover {
+    background-color: #002aff; 
+    color: #000000; 
+    box-shadow: 0 0 10px #002aff, 0 0 20px #7085ed; 
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px darkblue, 0 0 20px blue, 0 0 30px #4000ffab; 
+    }
+    100% {
+        text-shadow: 0 0 20px #4b19fe, 0 0 30px #4800ff, 0 0 40px #2567ff; 
+    }
+}
+
+
+div > h1{ 
+
+    text-align: left;
+    letter-spacing: 11px; font-size: 40px;
+    text-decoration: underline;
+    padding: 15px;
+    margin: auto;
+    position:relative;
+    top: 80px;
+    left: 40px;
+    color: white;
+    }
+#banner-div >h1::first-letter{
+    font-size: 45px; color:#004aeb;
+    }
+
+h2{ font-size: 38px;
+    margin: auto; 
+    text-align: left; font-family: Garamond, serif; 
+position: relative;
+    top: 100px;
+    left: 40px;
+    color: white;
+    padding: 15px;
+    }
+
+.glowing-button {
+    font-size: medium;
+        background-color: #0006b1;
+        padding: 3px; 
+        border: none; 
+        border-radius: 8px;
+        transition: box-shadow 0.3s; 
+    }
+
+    @keyframes glow {
+        0% {
+            box-shadow: 0 0 5px blue, 0 0 10px #5f2aff, 0 0 15px #b00000;
+        }
+        50% {
+            box-shadow: 0 0 20px blue, 0 0 30px #5f2aff, 0 0 40px #b00000;
+        }
+        100% {
+            box-shadow: 0 0 5px blue, 0 0 10px #5f2aff, 0 0 15px #b00000;
+        }
+    }
+
+    .glowing-button:hover {
+        animation: glow 1.5s infinite;
+    }
+        
+#banner-div{
+    background-image: url(images/sung-jinwoo-solo-leveling-season-2-4k-wallpaper-uhdpaper.com-249@5@b.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 425px;
+    margin-bottom: 15px;
+        }       
+        
+
+button{
+    text-align: center;
+    cursor:pointer;
+    position: fixed;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 70px;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #5500ff;
+    color: ghostwhite;
+    position: relative;
+    left:50px;
+    top: 100px;
+   }
+   
+   button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+   }
+   
+   button:hover span {
+    color: white;
+   }
+   
+   button::before,
+   button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+   }
+   
+   button::before {
+    content: "";
+    background: #0023a0;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+   }
+   
+   button:hover::before {
+    transform: translate3d(100%, 0, 0);
+   }
+
+section{text-decoration:underline;
+    text-shadow: #03054a;
+    text-align: center;
+    padding-top: 10px;
+    font-size: larger;
+    font-family: Garamond, serif; 
+
+    
+}
+
+/* Card styles */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+    padding: 20px; /* Padding around the card container */
+}
+
+.container {
+    width: 230px; /* Width of the container */
+    height: 250px; /* Height of the container */
+    perspective: 700px; /* Perspective for the 3D effect */
+}
+
+.card {
+    height: 100%; /* Full height of the container */
+    width: 100%; /* Full width of the container */
+    position: relative; /* Relative position for inner absolute elements */
+    transition: transform 0.7s; /* Smooth transition for rotate */
+    transform-style: preserve-3d; /* Preserve 3D for child elements */
+}
+
+.container:hover > .card {
+    cursor: pointer; /* Pointer cursor on hover */
+    transform: rotateY(180deg); /* Rotate the card on hover */
+}
+
+.front,
+.back {
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+    border-radius: 2rem; /* Rounded corners */
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25); /* Shadow effect */
+    position: absolute; /* Absolute for stacking */
+    backface-visibility: hidden; /* Hide back when facing front */
+}
+
+.front {
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.front img {
+    width: 100%; /* Fill the card */
+    height: 100%; /* Fill the card */
+    border-radius: 2rem; /* Matching rounded corners */
+}
+
+.back {
+    color: #ffffff; /* White text color for better contrast */
+    background-color: #343434; /* Dark background */
+    transform: rotateY(180deg); /* Rotate back to position it */
+    display: flexbox; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 1rem; /* Space between elements */
+    text-align: center; /* Center align text */
+    padding: 1px; /* Padding inside */
+    border-radius: 2rem; /* General rounded corners for the back */
+    box-sizing: border-box; /* Include padding in size */
+    overflow: visible; /* Hide overflow content */
+    margin: 5%;
+}
+p{
+    font-size: small;
+    margin: 10px;
+  }
+  
+  p:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+  
+  .site-container {
+    display: grid;
+    place-items: center;
+   margin-top: -90px;
+   margin-bottom: -90px;
+    min-height: 100vh;
+    padding: 1.4em;
+  }
+  
+  
+  .card-para {
+    max-width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    max-width:fit-content;
+    height: fit-content;
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+  }
+  
+  .card-footer {
+    font-size: 0.65em;
+    color: #446;
+  }
+  

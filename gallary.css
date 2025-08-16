@@ -1,0 +1,134 @@
+/* General Body Styles */
+body {
+    background: url(images/Cover3.jpg) no-repeat center center fixed; 
+    background-size: cover; 
+    font-family: 'Arial', sans-serif; 
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Existing Header Styles */
+.header-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(9, 0, 173, 0.7)); 
+    padding: 15px 30px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#header-div {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    transition: all 0.3s ease;
+}
+
+.brand-title {
+    font-size: 48px; 
+    color: black; 
+    margin-right: auto; 
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff, 0 0 30px #ff00ff; 
+    animation: glowing 1.5s infinite alternate; 
+    font-family: 'Valencia', sans-serif; 
+}
+
+nav a {
+    margin: 0 7px; 
+    color: #00ffcc; 
+    text-transform: uppercase; 
+    border: 2px solid transparent; 
+    padding: 7px; 
+    transition: color 0.3s, border-color 0.3s; 
+}
+
+nav a:hover {
+    color: #ff00ff; 
+    border-color: #00ffcc; 
+}
+
+.glow-button {
+    font-size: medium; 
+    background-color: #5b24de; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    color: #ffffff; 
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    text-shadow: 0 0 5px #f1f1f1; 
+}
+
+.glow-button:hover {
+    background-color: #002aff; 
+    color: #000000; 
+    box-shadow: 0 0 10px #002aff, 0 0 20px #7085ed; 
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px darkblue, 0 0 20px blue, 0 0 30px #4000ffab; 
+    }
+    100% {
+        text-shadow: 0 0 20px #4b19fe, 0 0 30px #4800ff, 0 0 40px #2567ff; 
+    }
+}
+
+/* Gallery Section Styles */
+.gallery-container {
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 20px; 
+    border-radius: 10px; 
+    max-width: 900px; 
+    margin: 50px auto; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.section-title {
+    text-align: center; 
+    font-size: 36px; 
+    margin-bottom: 20px; 
+    color: #00b3ff; 
+}
+
+.gallery-wrapper {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+}
+
+.gallery-item {
+    margin: 10px; 
+    position: relative;
+    flex: 1 1 30%; /* Responsive flex item */
+}
+
+.gallery-item img {
+    width: 100%; 
+    border-radius: 10px; 
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Image zoom on hover */
+}
+
+.download-button {
+    text-align: center; 
+    margin-top: 5px; 
+}
+
+.download-button a {
+    background-color:#00b3ff; 
+    color: white; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s; 
+}
+
+.download-button a:hover {
+    background-color: #0400ff; 
+}
